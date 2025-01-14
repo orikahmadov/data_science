@@ -17,7 +17,7 @@ df = pd.read_csv(url)
 # Drop irrelevant columns
 df = df.drop(['PassengerId', 'Name', 'Ticket', 'Cabin','Parch', 'SibSp'], axis=1)
 
-#Drop rows with missing values
+#We can either drop missing values or fill them with median (average) values for instance if age of someone is missing we could just generate an age from avg from passngers
 df = df.dropna()
 
 # Convert categorical variables to dummy variables like 0 for male and 1 for female 
